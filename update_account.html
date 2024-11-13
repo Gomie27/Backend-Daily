@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Account</title>
+</head>
+<body>
+    <h1>Update Account</h1>
+
+    <form method="POST">
+        <div>
+            <label for="account_name">Account Name:</label>
+            <input type="text" name="account_name" value="{{ account.account_name }}" required>
+        </div>
+
+        <div>
+            <label for="balance">Balance:</label>
+            <input type="number" name="balance" value="{{ account.balance }}" required>
+        </div>
+
+        <button type="submit">Update Account</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('home') }}">Cancel</a>
+
+</body>
+</html>
